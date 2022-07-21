@@ -14,8 +14,8 @@
 
 <body>
     <div class="container">
-        <input type="text" name="SoNhap" placeholder="Nhập sô cần tìm..." />
-        <button type="submit" onclick="Tim()">Tìm</button>
+        <!-- <input type="text" name="SoNhap" placeholder="Nhập sô cần tìm..." />
+        <button type="submit" onclick="Tim()">Tìm</button> -->
         <?php
         $arr_length = $_GET["dodaimang"]; 
         echo "<p>Mảng có độ dài: $arr_length</p>";
@@ -28,31 +28,32 @@
             $array[] = $rand;
             $max_value = max($array);
             $min_value = min($array);
-            $sort[] = sort($array);
+            //$sort[] = sort($array);
             $rsort[]= rsort($array);
+            
         }
         echo "<br/> Phần tử lớn nhất trong mảng là: ".$max_value;
         echo "<br/> Phần tử nhỏ nhất trong mảng là: ".$min_value."<br/>";
         echo "<br/> Mảng sắp xếp tăng dần: "; 
-        for($i = 0; $i < count($sort); $i++) {
-            echo $array[$i];
-            echo "\t";
-        }
+        // for($i = 0; $i < count($array); $i++) {
+        //         echo sort($array[$i]);
+        //         echo "\t";
+        //     }
         echo "<br/> Mảng sắp xếp giảm dần: "; 
         for($i = 0; $i < count($rsort); $i++) {
             echo $array[$i];
             echo "\t";
         }
         // tim
-        function Tim(){
-            $soNhap = $_GET["SoNhap"];
-            if(in_array($soNhap, $array)){
-            echo "<br />Tìm thấy ".$soNhap;
+       
+            //$soNhap = $_GET["SoNhap"];
+            if(in_array($rand, $array)){
+            echo "<br />Tìm thấy ".$rand;
             }
             else{
-            echo "<br />Không tìm thấy ".$soNhap;
+            echo "<br />Không tìm thấy ".$rand;
             }
-        }
+        
         ?>
     </div>
 </body>
