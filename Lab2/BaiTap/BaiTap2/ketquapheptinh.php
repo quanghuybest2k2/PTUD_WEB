@@ -6,10 +6,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $PhepTinhChon = false;
     }
     $SoThuNhat = $_POST["SoThuNhat"];
-
     $SoThuNhi = $_POST["SoThuNhi"];
-
-    $KetQua = $SoThuNhat * $SoThuNhi;
+    $KetQua;
+    switch ($PhepTinhChon) {
+        case 'Cộng':
+            $KetQua = $SoThuNhat + $SoThuNhi;
+            break;
+        case 'Trừ':
+            $KetQua = $SoThuNhat - $SoThuNhi;
+            break;
+        case 'Nhân':
+            $KetQua = $SoThuNhat * $SoThuNhi;
+            break;
+        case 'Chia':
+            $KetQua = $SoThuNhat / $SoThuNhi;
+            break;
+    }
 }
 ?>
 <!DOCTYPE html>
