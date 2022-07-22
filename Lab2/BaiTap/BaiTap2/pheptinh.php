@@ -20,22 +20,22 @@
                 <h1>PHÉP TÍNH TRÊN HAI SỐ</h1>
                 <div class="form-group" id="lableChonPT">
                     <label>Chọn phép tính: </label>
-                    <input type="radio" name="PhepTinh" />
+                    <input type="radio" value="Cộng" name="PhepTinh" checked="checked" />
                     <label>Cộng</label>
-                    <input type="radio" name="PhepTinh" />
+                    <input type="radio" value="Trừ" name="PhepTinh" />
                     <label>Trừ</label>
-                    <input type="radio" name="PhepTinh" />
+                    <input type="radio" value="Nhân" name="PhepTinh" />
                     <label>Nhân</label>
-                    <input type="radio" name="PhepTinh" />
+                    <input type="radio" value="Chia" name="PhepTinh" />
                     <label>Chia</label>
                 </div>
                 <div class="form-group">
                     <label style="color: blue;">Số thứ Nhất:</label>
-                    <input type="text" name="SoThuNhat" />
+                    <input type="text" name="SoThuNhat" required />
                 </div>
                 <div class="form-group">
                     <label style="color: blue;">Số thứ Nhì:</label>
-                    <input type="text" name="SoThuNhi" />
+                    <input type="text" name="SoThuNhi" required />
                 </div>
                 <button type="submit" class="btn btn-primary" name="Tinh">Tính</button>
         </form>

@@ -1,3 +1,17 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST["PhepTinh"])) {
+        $PhepTinhChon = $_POST["PhepTinh"];
+    } else {
+        $PhepTinhChon = false;
+    }
+    $SoThuNhat = $_POST["SoThuNhat"];
+
+    $SoThuNhi = $_POST["SoThuNhi"];
+
+    $KetQua = $SoThuNhat * $SoThuNhi;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,19 +33,20 @@
             <div class="content">
                 <h1>PHÉP TÍNH TRÊN HAI SỐ</h1>
                 <div class="form-group" id="lableChonPT">
-                    <label>Chọn phép tính: Hiển thị phép tính chọn</label>
+                    <label>Chọn phép tính: <?php echo $PhepTinhChon ?></label>
                 </div>
                 <div class="form-group">
                     <label style="color: blue;">Số 1:</label>
-                    <input type="text" />
+                    <input type="text" <?php echo "value='$SoThuNhat'" ?> />
                 </div>
                 <div class="form-group">
                     <label style="color: blue;">Số 2:</label>
-                    <input type="text" />
+                    <input type="text" <?php echo "value='$SoThuNhi'" ?> />
                 </div>
                 <div class="form-group">
                     <label style="color: blue;">Kết quả:</label>
-                    <input type="text" />
+
+                    <?php echo "<input type='text' value='$KetQua' />" ?>
                 </div>
                 <a href="./pheptinh.php">Quay lại trang trước</a>
         </form>
