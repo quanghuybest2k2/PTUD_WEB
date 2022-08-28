@@ -15,12 +15,12 @@
 <body>
     <?php
     $member = array("Quang Huy", "Sang", "Trang", "Sương", "Nhật Huy", "Minh Nhật");
-    $random = array_rand($member, 5); 
-    echo $member[$random[0]]."<br>";
-    echo $member[$random[1]]."<br>";
-    echo $member[$random[2]]."<br>";
-    echo $member[$random[3]]."<br>";
-    echo $member[$random[4]]."<br>";
+    $random = array_rand($member, 5);
+    echo $member[$random[0]] . "<br>";
+    echo $member[$random[1]] . "<br>";
+    echo $member[$random[2]] . "<br>";
+    echo $member[$random[3]] . "<br>";
+    echo $member[$random[4]] . "<br>";
     ?>
     <div class="container">
         <div class="text-center">Random ngẫu nhiên</div>

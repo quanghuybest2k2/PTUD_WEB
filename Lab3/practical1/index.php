@@ -14,7 +14,7 @@
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <form action="login.php" method="GET">
+        <form action="./login.php" method="GET">
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
             <input type="email" name="diachiemail" class="form-control" id="exampleInputEmail1">
